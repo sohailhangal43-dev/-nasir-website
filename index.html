@@ -12,88 +12,96 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
-line-height:1.6;
+background:#ffffff;
+color:#222;
 }
 
 /* NAVBAR */
 nav{
-background:#000;
-padding:15px 40px;
+background:#ffffff;
+padding:18px 50px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
 z-index:1000;
 }
 
-nav h2{
-color:#38bdf8;
+.logo{
+font-size:20px;
+font-weight:700;
+color:#0f172a;
+}
+
+.logo span{
+color:#0ea5e9;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin-left:20px;
+color:#444;
+margin-left:25px;
 font-size:14px;
+font-weight:500;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#0ea5e9;
 }
 
 /* HERO */
 .hero{
-padding:100px 20px;
+padding:120px 20px;
 text-align:center;
-background:linear-gradient(to right,#0f172a,#1e293b);
+background:#f8fafc;
 }
 
 .hero h1{
-font-size:40px;
+font-size:38px;
 margin-bottom:15px;
 }
 
 .hero p{
-color:#38bdf8;
-margin-bottom:25px;
+color:#0ea5e9;
 font-size:18px;
+margin-bottom:25px;
 }
 
 .hero a{
 display:inline-block;
-padding:14px 30px;
+padding:14px 28px;
 background:#25D366;
 color:white;
 text-decoration:none;
 border-radius:6px;
-font-weight:bold;
+font-weight:600;
 }
 
 /* SECTIONS */
 section{
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 section h2{
-color:#38bdf8;
 margin-bottom:25px;
+font-size:28px;
+color:#0f172a;
 }
 
 /* ABOUT */
 .about{
-background:#111827;
-max-width:1000px;
+max-width:900px;
 margin:auto;
-padding:40px;
-border-radius:10px;
+font-size:16px;
+line-height:1.8;
+color:#555;
 }
 
 /* SERVICES */
@@ -102,39 +110,41 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:30px;
-margin-top:30px;
+margin-top:40px;
 }
 
 .card{
-background:#1e293b;
+background:#ffffff;
 padding:25px;
-width:280px;
-border-radius:10px;
+width:300px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card h3{
-color:#38bdf8;
 margin-bottom:10px;
+color:#0ea5e9;
+}
+
+.card p{
+font-size:14px;
+color:#555;
 }
 
 .card img{
 width:100%;
-border-radius:8px;
+border-radius:10px;
 margin-top:15px;
 }
 
 /* CONTACT */
 .contact{
-background:#111827;
-}
-
-.contact p{
-margin:10px 0;
+background:#f8fafc;
 }
 
 .button{
@@ -144,11 +154,12 @@ padding:12px 25px;
 border-radius:6px;
 text-decoration:none;
 color:white;
-font-weight:bold;
+font-weight:600;
+margin-right:10px;
 }
 
 .call-btn{
-background:#38bdf8;
+background:#0ea5e9;
 }
 
 .whatsapp-btn{
@@ -157,17 +168,18 @@ background:#25D366;
 
 /* FOOTER */
 footer{
-background:#000;
+background:#0f172a;
+color:white;
 padding:20px;
 text-align:center;
+margin-top:50px;
 font-size:14px;
-margin-top:40px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
 .hero h1{
-font-size:28px;
+font-size:26px;
 }
 .services{
 flex-direction:column;
@@ -180,7 +192,7 @@ align-items:center;
 <body>
 
 <nav>
-<h2>NASIR HANGAL</h2>
+<div class="logo">Nasir Hangal <span>Motor Works</span></div>
 <div>
 <a href="#">Home</a>
 <a href="#about">About</a>
@@ -191,22 +203,18 @@ align-items:center;
 
 <div class="hero">
 <h1>Motor Rewinding & Pump Repair Experts in Goa</h1>
-<p>35+ Years of Trusted & Reliable Service</p>
+<p>Trusted Service Since 35+ Years</p>
 <a href="https://wa.me/919096777887">Chat on WhatsApp</a>
 </div>
 
 <section id="about">
 <h2>About Us</h2>
 <div class="about">
-<p>
 Nasir Hangal Motor Rewinding Works is a trusted motor rewinding and repair shop in Margao, Goa. We repair and rewind all types of electric motors and water pumps with proper care and quality work.
 <br><br>
-We handle single-phase and three-phase motors, water pumps, submersible pumps, monoblock pumps, fan motors, and industrial motors. If your motor is not working, overheating, or making noise, we check and fix the problem correctly.
+We handle single-phase and three-phase motors, submersible pumps, monoblock pumps, fan motors, and industrial motors. If your motor is not working, overheating, or making noise, we check and fix the problem correctly.
 <br><br>
 We use good quality copper wire and test every motor before delivery. Our focus is on honest service, timely work, and reasonable pricing.
-<br><br>
-For reliable motor rewinding and pump repair service, contact Nasir Hangal Motor Rewinding Works.
-</p>
 </div>
 </section>
 
@@ -228,8 +236,8 @@ For reliable motor rewinding and pump repair service, contact Nasir Hangal Motor
 </div>
 
 <div class="card">
-<h3>Submersible Pumps</h3>
-<p>Expert repair and servicing of pump systems.</p>
+<h3>Pump Repair</h3>
+<p>Expert servicing of submersible and water pumps.</p>
 <img src="file_00000000d1c072069c482409ffe831b3.png">
 </div>
 
